@@ -7,3 +7,7 @@ PACKAGE_INSTALL:remove = "${@oe.utils.vartrue('RPI_SECURE_BOOT', 'ssh-keys', '',
 PACKAGE_INSTALL:remove = "cmld-dbg"
 PACKAGE_INSTALL:remove = "gdb"
 PACKAGE_INSTALL:remove = "gdbserver"
+
+# only raspberrypi 4 + 5 support secure boot + customer private key
+PACKAGE_INSTALL:append:raspberrypi4-64 = " userland"
+PACKAGE_INSTALL:append:raspberrypi5 = " userland"
