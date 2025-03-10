@@ -10,6 +10,7 @@ KERNEL_IMAGETYPE_DIRECT = "Image.gz"
 
 # currently not included by meta-raspberrypi
 RPI_KERNEL_DEVICETREE:append = " broadcom/bcm2712-rpi-500.dtb"
+RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/bcm2712d0.dtbo"
 
 # if SERIAL_CONSOLES is set and ENABLE_UART is false, getty will flood
 # the LOGTTY with error messages. Clear SERIAL_CONSOLES to silence errors.
