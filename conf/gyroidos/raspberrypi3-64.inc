@@ -3,7 +3,7 @@ require raspberrypi-generic.inc
 MACHINE="raspberrypi3-64"
 MACHINEOVERRIDES =. "raspberrypi3-64:"
 
-GYROIDOS_CONTAINER_ARCH = "qemuarm64"
+GYROIDOS_GUESTOS_ARCH = "qemuarm64"
 
 # Kernel image name
 KERNEL_IMAGETYPE_DIRECT = "Image.gz"

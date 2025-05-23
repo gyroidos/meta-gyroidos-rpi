@@ -3,7 +3,7 @@ require raspberrypi-generic.inc
 MACHINE="raspberrypi2"
 MACHINEOVERRIDES =. "raspberrypi2:"
 
-GYROIDOS_CONTAINER_ARCH = "qemuarm"
+GYROIDOS_GUESTOS_ARCH = "qemuarm"
 
 DISTRO_FEATURES:remove = " tmedbg-extended"
 

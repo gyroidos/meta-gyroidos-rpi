@@ -3,7 +3,7 @@ require raspberrypi-generic.inc
 MACHINE="raspberrypi4-64"
 MACHINEOVERRIDES =. "raspberrypi4-64:"
 
-GYROIDOS_CONTAINER_ARCH = "qemuarm64"
+GYROIDOS_GUESTOS_ARCH = "qemuarm64"
 
 # enable compressed kernel image
 KERNEL_IMAGETYPE_DIRECT = "Image.gz"
