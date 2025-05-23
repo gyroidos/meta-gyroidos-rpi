@@ -11,7 +11,7 @@ GYROIDOS_HARDWARE = "arm"
 GYROIDOS_LOGTTY = "tty11"
 
 PACKAGE_CLASSES = "package_ipk"
-BBMULTICONFIG = "container"
+BBMULTICONFIG = "guestos"
 
 PREFERRED_PROVIDER_virtual/kernel:${MACHINE} ?= "linux-raspberrypi-dev"
 PREFERRED_PROVIDER_virtual/kernel:gyroidos-cml ?= "linux-raspberrypi-dev"
