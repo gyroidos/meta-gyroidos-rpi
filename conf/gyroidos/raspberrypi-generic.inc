@@ -52,6 +52,10 @@ def make_dtb_boot_files(d):
     # KERNEL_DEVICETREE.
     alldtbs = d.getVar('KERNEL_DEVICETREE')
 
+    # DTBs may be built out of kernel with devicetree.bbclass
+    if not alldtbs:
+        return ''
+
     prefix = d.getVar('KERNEL_DEPLOYSUBDIR')
     if prefix != "" :
         prefix = prefix + "/"
