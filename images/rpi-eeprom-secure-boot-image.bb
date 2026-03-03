@@ -6,6 +6,8 @@ inherit image
 DEPENDS += "dosfstools-native mtools-native rpi-eeprom-native openssl-native"
 IMAGE_FSTYPES = "vfat"
 
+IMAGE_NAME_SUFFIX = ""
+
 RPI_EEPROM:raspberrypi4-64 = "bootloader-2711/default/pieeprom-2023-01-11.bin"
 RPI_RECOVERY:raspberrypi4-64 = "bootloader-2711/default/recovery.bin"
 BOOT_CONF:raspberrypi4-64 = "boot4.conf"
@@ -14,7 +16,7 @@ RPI_RECOVERY:raspberrypi5 = "bootloader-2712/latest/recovery.bin"
 BOOT_CONF:raspberrypi5 = "boot5.conf"
 
 prepare_eeprom () {
-  cp "${RECIPE_SYSROOT_NATIVE}/usr/lib/firmware/raspberrypi/${RPI_EEPROM}" "${B}/pieeprom.bin"
+  cp "${STAGING_BASE_LIBDIR_NATIVE}/firmware/raspberrypi/${RPI_EEPROM}" "${B}/pieeprom.bin"
 }
 
 do_rootfs () {
@@ -43,7 +45,7 @@ do_rootfs () {
         -i "${IMAGE_ROOTFS}/pieeprom.bin" \
         -o "${IMAGE_ROOTFS}/pieeprom.sig"
 
-  cp "${RECIPE_SYSROOT_NATIVE}/usr/lib/firmware/raspberrypi/${RPI_RECOVERY}" "${IMAGE_ROOTFS}/"
+  cp "${STAGING_BASE_LIBDIR_NATIVE}/firmware/raspberrypi/${RPI_RECOVERY}" "${IMAGE_ROOTFS}/"
 }
 ROOTFS_PREPROCESS_COMMAND += "return;"
 
