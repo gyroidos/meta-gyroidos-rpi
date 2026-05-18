@@ -5,7 +5,7 @@ LICENSE = "BSD-3-Clause & Broadcom-RPi & MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=449418bd5e2b674b51a36c78f3f85a01"
 
 SRC_URI = " \
-    git://github.com/raspberrypi/rpi-eeprom.git;protocol=https;branch=master \
+    https://github.com/raspberrypi/rpi-eeprom.git;protocol=https;branch=master \
 "
 
 SRCREV = "b67b21ddda8b6468090fcdc5034bb075344a8903"
