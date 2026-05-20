@@ -9,6 +9,9 @@ SRC_URI += "\
 "
 SRC_URI:append:raspberrypi5 = " file://gyroidos-rpi5.cfg"
 
+SRC_URI:remove = "git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=${LINUX_RPI_KMETA_BRANCH};destsuffix=${KMETA}"
+SRC_URI:append = " git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=${LINUX_RPI_KMETA_BRANCH};destsuffix=${KMETA};protocol=https "
+
 LINUX_VERSION_EXTENSION = "-gyroidos"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/linux-raspberrypi:"
